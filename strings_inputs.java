@@ -19,6 +19,7 @@ public class conditionals {
         // with escape sequences:
         System.out.println("You are" + " \"" + fname+ "\" , " + age+ " years old.");
         /* \\ - backslash , \t - tab , \n - new line*/
+        //String methods. Check : https://www.w3schools.com/java/java_ref_string.asp
         System.out.println(fname.contains("e"));//checks if e in name
         System.out.println(fname.charAt(3));//checks for letter at index 3 , indexes start from 0
         System.out.println(fname.endsWith("k"));//checks if fname ends with k
