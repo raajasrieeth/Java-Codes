@@ -1,8 +1,17 @@
-import java.util.Scanner;//for input
-
-
-public class calculator{
-    //TODO:make a calculator.
+import java.util.Scanner;
+class functional_approach_calc{
+    static void Sum(float a, float b){
+        System.out.println((a + b) +" is the answer.");
+    }
+    static void Diff(float a , float b ){
+        System.out.println((a-b)+" is the answer.");
+    }
+    static void Prod(float a , float b){
+        System.out.println((a * b)+" is the answer.");
+    }
+    static void Quo(float a , float b){
+        System.out.println((a/ b)+" is the answer.");
+    }
     public static void main(String[ ] args){
         Scanner scan = new Scanner(System.in);//new Scanner object.
         System.out.println("Enter the operation");
@@ -14,16 +23,16 @@ public class calculator{
         float $b = scan.nextFloat();//Second number
         switch (op) {//Switch-case block for various operations
             case "+":
-            System.out.println(($a + $b) +" is the answer.");
+                Sum($a, $b);
                 break;
             case "-":
-            System.out.println(($a-$b)+" is the answer.");
+                Diff($a, $b);
                 break;
             case "*":
-            System.out.println(($a * $b)+" is the answer.");
+                Prod($a, $b);
                 break;
             case"/":
-            System.out.println(($a/$b)+" is the answer.");
+                Quo($a , $b);
                 break;
             default://not any of the operation
             System.out.println("Enter a valid operation.");
@@ -38,5 +47,6 @@ public class calculator{
 
 
     }
+
 
 }
