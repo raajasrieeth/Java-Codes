@@ -1,5 +1,3 @@
-import javax.naming.spi.DirStateFactory.Result;
-
 public class methods {
     //TODO:use methods
     //Methods are a block of code that is run when called
@@ -29,6 +27,8 @@ public class methods {
         return a + b;
     }
     //Now to print out the sum of a range of numbers using a recursive approach:
+    /*Every recursive function should have a halting condition, which is the condition where the
+    function stops calling itself. */
     static int Summer(int range){
         if(range>0){
             int result = range+Summer(range-1);//again run the summer method on the number 1 less than the range , and the process continues.
