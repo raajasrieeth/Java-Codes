@@ -18,7 +18,7 @@ public class Employee{
     }
     public String details(){//compile all values into 1 statement
         //exagerration:
-        if(age < 100 && age >18){
+        if(age < 100 && age >18 && experience < age-3){
         return(name+ " is "+ age+ " Years old. He earns  " +Salary+" per month. He has "+ experience+" Years of experience. His email is : "+email);
         }
         else{
