@@ -18,6 +18,6 @@ public class more_methods {
         //now as a car template:
         more_methods Toyota = new more_methods();
         Toyota.carMaxSpeed(23);
-        Toyota.carName("noName");//static can also be accessed with an object , but public cant.
+        Toyota.carName("noName");//static can also be accessed with an object , but public cant be accessed  WITHOUT an object.
     }
 }

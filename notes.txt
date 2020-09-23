@@ -70,3 +70,111 @@ abstract    |	Can only be used in an abstract class, and can only be used on met
 transient   |	Attributes and methods are skipped when serializing the object containing them
 synchronized|	Methods can only be accessed by one thread at a time
 volatile    |	The value of an attribute is not cached thread-locally, and is always read from the "main memory"
+
+
+
+
+
+
+
+
+
+
+Examples:
+<Abstract class:>
+===================================================================================================================|
+Abstract
+An abstract method belongs to an abstract class, and it does not have a body. The body is provided by the subclass:
+
+Example:
+// Code from filename: Person.java
+// abstract class
+abstract class Person {
+  public String fname = "John";
+  public int age = 24;
+  public abstract void study(); // abstract method
+}
+
+// Subclass (inherit from Person)
+class Student extends Person {
+  public int graduationYear = 2018;
+  public void study() { // the body of the abstract method is provided here
+    System.out.println("Studying all day long");
+  }
+}
+// End code from filename: Person.java
+
+// Code from filename: MyClass.java
+class MyClass {
+  public static void main(String[] args) {
+    // create an object of the Student class (which inherits attributes and methods from Person)
+    Student myObj = new Student();
+
+    System.out.println("Name: " + myObj.fname);
+    System.out.println("Age: " + myObj.age);
+    System.out.println("Graduation Year: " + myObj.graduationYear);
+    myObj.study(); // call abstract method
+  }
+}
+===================================================================================================================|
+
+===================================================================================================================|
+Packages:
+refer: https://www.w3schools.com/java/java_packages.asp
+
+To use a class or a package from the library, you need to use the import keyword:
+
+Syntax:
+  import package.name.Class;   // Import a single class
+  import package.name.*;   // Import the whole package
+
+
+User-defined Packages:
+
+  To create your own package, you need to understand that Java uses a file system directory to store them. Just like folders on your computer:
+
+  Example:
+  └── root
+    └── mypack
+      └── MyPackageClass.java
+
+To create a package, use the package keyword:
+package mypack;
+class MyPackageClass {
+  public static void main(String[] args) {
+    System.out.println("This is my package!");
+  }
+}
+
+C:\Users\Your Name>javac MyPackageClass.java//make a class file.
+
+Then compile the package:
+
+C:\Users\Your Name>javac -d . MyPackageClass.java
+
+This forces the compiler to create the "mypack" package.
+
+The -d keyword specifies the destination for where to save the class file. You can use any directory name, like c:/user (windows), or, if you want to keep the package within the same directory, you can use the dot sign ".", like in the example above.
+
+Note: The package name should be written in lower case to avoid conflict with class names.
+Note: The package should be compiled again if there were changes done to the file.
+===================================================================================================================|
+
+
+Inheritance in Java;
+reference : https://www.w3schools.com/java/java_inheritance.asp
+
+
+-->subclass (child) - the class that inherits from another class.
+-->superclass (parent) - the class being inherited from.
+
+If you don't want other classes to inherit from a class, use the final keyword.
+
+final Class Name{
+  //cannot be used as parent class
+}
+Polymorphism:
+https://www.w3schools.com/java/java_polymorphism.asp
+
+Why And When To Use "Inheritance" and "Polymorphism"?
+- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
